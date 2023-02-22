@@ -1,0 +1,2 @@
+mem_background.v,verilog,xil_defaultlib,../../../../project.srcs/sources_1/ip/mem_background/sim/mem_background.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

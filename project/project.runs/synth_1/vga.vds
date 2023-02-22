@@ -1,0 +1,636 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Sat Jul 30 22:53:06 2022
+# Process ID: 13824
+# Current directory: C:/Users/86182/Desktop/vivado workshop/project/project.runs/synth_1
+# Command line: vivado.exe -log vga.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source vga.tcl
+# Log file: C:/Users/86182/Desktop/vivado workshop/project/project.runs/synth_1/vga.vds
+# Journal file: C:/Users/86182/Desktop/vivado workshop/project/project.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source vga.tcl -notrace
+Command: synth_design -top vga -part xc7a35tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 36488 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 344.062 ; gain = 101.816
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'vga' [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/vga.v:23]
+	Parameter C_H_SYNC_PULSE bound to: 128 - type: integer 
+	Parameter C_H_BACK_PORCH bound to: 88 - type: integer 
+	Parameter C_H_ACTIVE_TIME bound to: 800 - type: integer 
+	Parameter C_H_FRONT_PROCH bound to: 40 - type: integer 
+	Parameter C_H_LINE_PERIOD bound to: 1056 - type: integer 
+	Parameter C_V_SYNC_PULSE bound to: 4 - type: integer 
+	Parameter C_V_BACK_PORCH bound to: 23 - type: integer 
+	Parameter C_V_ACTIVE_TIME bound to: 600 - type: integer 
+	Parameter C_V_FRONT_PROCH bound to: 1 - type: integer 
+	Parameter C_V_FRAME_PERIOD bound to: 628 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/86182/Desktop/vivado workshop/project/project.runs/synth_1/.Xil/Vivado-13824-LAPTOP-J1V8P7F0/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'clk_wiz_0' (1#1) [C:/Users/86182/Desktop/vivado workshop/project/project.runs/synth_1/.Xil/Vivado-13824-LAPTOP-J1V8P7F0/realtime/clk_wiz_0_stub.v:5]
+WARNING: [Synth 8-350] instance 'clk_inst' of module 'clk_wiz_0' requires 4 connections, but only 2 given [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/vga.v:42]
+INFO: [Synth 8-638] synthesizing module 'vga_pic' [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/vga_pic.v:23]
+	Parameter screen_width bound to: 800 - type: integer 
+	Parameter screen_height bound to: 600 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'bird' [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/bird.v:23]
+	Parameter CD bound to: 12 - type: integer 
+	Parameter default_speed bound to: 300 - type: integer 
+	Parameter g bound to: 15 - type: integer 
+	Parameter length bound to: 20 - type: integer 
+	Parameter width bound to: 20 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'mem_bird' [C:/Users/86182/Desktop/vivado workshop/project/project.runs/synth_1/.Xil/Vivado-13824-LAPTOP-J1V8P7F0/realtime/mem_bird_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'mem_bird' (2#1) [C:/Users/86182/Desktop/vivado workshop/project/project.runs/synth_1/.Xil/Vivado-13824-LAPTOP-J1V8P7F0/realtime/mem_bird_stub.v:6]
+WARNING: [Synth 8-689] width (16) of port connection 'addra' does not match port width (13) of module 'mem_bird' [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/bird.v:100]
+WARNING: [Synth 8-5788] Register bigheight_reg in module bird is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/bird.v:90]
+INFO: [Synth 8-256] done synthesizing module 'bird' (3#1) [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/bird.v:23]
+INFO: [Synth 8-638] synthesizing module 'pipe' [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/pipe.v:23]
+	Parameter p_width bound to: 60 - type: integer 
+	Parameter CD bound to: 12 - type: integer 
+	Parameter default_speed bound to: 4 - type: integer 
+	Parameter screen_width bound to: 800 - type: integer 
+	Parameter screen_height bound to: 600 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'mem_pipe' [C:/Users/86182/Desktop/vivado workshop/project/project.runs/synth_1/.Xil/Vivado-13824-LAPTOP-J1V8P7F0/realtime/mem_pipe_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'mem_pipe' (4#1) [C:/Users/86182/Desktop/vivado workshop/project/project.runs/synth_1/.Xil/Vivado-13824-LAPTOP-J1V8P7F0/realtime/mem_pipe_stub.v:6]
+WARNING: [Synth 8-689] width (16) of port connection 'addra' does not match port width (15) of module 'mem_pipe' [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/pipe.v:125]
+WARNING: [Synth 8-5788] Register p_pos_reg in module pipe is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/pipe.v:90]
+WARNING: [Synth 8-5788] Register p_height_reg in module pipe is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/pipe.v:91]
+INFO: [Synth 8-256] done synthesizing module 'pipe' (5#1) [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/pipe.v:23]
+INFO: [Synth 8-638] synthesizing module 'mem_background' [C:/Users/86182/Desktop/vivado workshop/project/project.runs/synth_1/.Xil/Vivado-13824-LAPTOP-J1V8P7F0/realtime/mem_background_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'mem_background' (6#1) [C:/Users/86182/Desktop/vivado workshop/project/project.runs/synth_1/.Xil/Vivado-13824-LAPTOP-J1V8P7F0/realtime/mem_background_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'result_display_module' [C:/Users/86182/Desktop/vivado workshop/homework_3/homework_3.srcs/sources_1/new/result_display_module.v:23]
+INFO: [Synth 8-226] default block is never used [C:/Users/86182/Desktop/vivado workshop/homework_3/homework_3.srcs/sources_1/new/result_display_module.v:73]
+INFO: [Synth 8-256] done synthesizing module 'result_display_module' (7#1) [C:/Users/86182/Desktop/vivado workshop/homework_3/homework_3.srcs/sources_1/new/result_display_module.v:23]
+INFO: [Synth 8-638] synthesizing module 'clock_divider' [C:/Users/86182/Desktop/vivado workshop/homework_3/homework_3.srcs/sources_1/new/clock_divider.v:23]
+INFO: [Synth 8-256] done synthesizing module 'clock_divider' (8#1) [C:/Users/86182/Desktop/vivado workshop/homework_3/homework_3.srcs/sources_1/new/clock_divider.v:23]
+INFO: [Synth 8-256] done synthesizing module 'vga_pic' (9#1) [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/vga_pic.v:23]
+INFO: [Synth 8-256] done synthesizing module 'vga' (10#1) [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/vga.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 395.953 ; gain = 153.707
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 395.953 ; gain = 153.707
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/86182/Desktop/vivado workshop/project/project.runs/synth_1/.Xil/Vivado-13824-LAPTOP-J1V8P7F0/dcp4/clk_wiz_0_in_context.xdc] for cell 'clk_inst'
+Finished Parsing XDC File [C:/Users/86182/Desktop/vivado workshop/project/project.runs/synth_1/.Xil/Vivado-13824-LAPTOP-J1V8P7F0/dcp4/clk_wiz_0_in_context.xdc] for cell 'clk_inst'
+Parsing XDC File [C:/Users/86182/Desktop/vivado workshop/project/project.runs/synth_1/.Xil/Vivado-13824-LAPTOP-J1V8P7F0/dcp5/mem_background_in_context.xdc] for cell 'p/membg'
+Finished Parsing XDC File [C:/Users/86182/Desktop/vivado workshop/project/project.runs/synth_1/.Xil/Vivado-13824-LAPTOP-J1V8P7F0/dcp5/mem_background_in_context.xdc] for cell 'p/membg'
+Parsing XDC File [C:/Users/86182/Desktop/vivado workshop/project/project.runs/synth_1/.Xil/Vivado-13824-LAPTOP-J1V8P7F0/dcp6/mem_bird_in_context.xdc] for cell 'p/b/mb'
+Finished Parsing XDC File [C:/Users/86182/Desktop/vivado workshop/project/project.runs/synth_1/.Xil/Vivado-13824-LAPTOP-J1V8P7F0/dcp6/mem_bird_in_context.xdc] for cell 'p/b/mb'
+Parsing XDC File [C:/Users/86182/Desktop/vivado workshop/project/project.runs/synth_1/.Xil/Vivado-13824-LAPTOP-J1V8P7F0/dcp7/mem_pipe_in_context.xdc] for cell 'p/p1/mp'
+Finished Parsing XDC File [C:/Users/86182/Desktop/vivado workshop/project/project.runs/synth_1/.Xil/Vivado-13824-LAPTOP-J1V8P7F0/dcp7/mem_pipe_in_context.xdc] for cell 'p/p1/mp'
+Parsing XDC File [C:/Users/86182/Desktop/vivado workshop/project/project.runs/synth_1/.Xil/Vivado-13824-LAPTOP-J1V8P7F0/dcp7/mem_pipe_in_context.xdc] for cell 'p/p2/mp'
+Finished Parsing XDC File [C:/Users/86182/Desktop/vivado workshop/project/project.runs/synth_1/.Xil/Vivado-13824-LAPTOP-J1V8P7F0/dcp7/mem_pipe_in_context.xdc] for cell 'p/p2/mp'
+Parsing XDC File [C:/Users/86182/Desktop/vivado workshop/project/project.runs/synth_1/.Xil/Vivado-13824-LAPTOP-J1V8P7F0/dcp7/mem_pipe_in_context.xdc] for cell 'p/p3/mp'
+Finished Parsing XDC File [C:/Users/86182/Desktop/vivado workshop/project/project.runs/synth_1/.Xil/Vivado-13824-LAPTOP-J1V8P7F0/dcp7/mem_pipe_in_context.xdc] for cell 'p/p3/mp'
+Parsing XDC File [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/constrs_1/new/vga_cons.xdc]
+Finished Parsing XDC File [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/constrs_1/new/vga_cons.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/constrs_1/new/vga_cons.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/vga_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/vga_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 737.223 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 737.223 ; gain = 494.977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 737.223 ; gain = 494.977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk_100M. (constraint file  {C:/Users/86182/Desktop/vivado workshop/project/project.runs/synth_1/.Xil/Vivado-13824-LAPTOP-J1V8P7F0/dcp4/clk_wiz_0_in_context.xdc}, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_100M. (constraint file  {C:/Users/86182/Desktop/vivado workshop/project/project.runs/synth_1/.Xil/Vivado-13824-LAPTOP-J1V8P7F0/dcp4/clk_wiz_0_in_context.xdc}, line 4).
+Applied set_property DONT_TOUCH = true for clk_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for p/b/mb. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for p/membg. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for p/p1/mp. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for p/p2/mp. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for p/p3/mp. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 737.223 ; gain = 494.977
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/bird.v:92]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/bird.v:113]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/bird.v:112]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/bird.v:113]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/bird.v:112]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/bird.v:113]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/bird.v:112]
+INFO: [Synth 8-5546] ROM "valid" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element hsCD_reg was removed.  [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/bird.v:68]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/pipe.v:131]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/pipe.v:132]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/pipe.v:131]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/pipe.v:132]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/pipe.v:131]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/pipe.v:132]
+INFO: [Synth 8-5546] ROM "valid" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element hspeed_reg was removed.  [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/pipe.v:109]
+WARNING: [Synth 8-6014] Unused sequential element hsCD_reg was removed.  [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/pipe.v:109]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/pipe.v:131]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/pipe.v:132]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/pipe.v:131]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/pipe.v:132]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/pipe.v:131]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/pipe.v:132]
+INFO: [Synth 8-5546] ROM "valid" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element hspeed_reg was removed.  [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/pipe.v:109]
+WARNING: [Synth 8-6014] Unused sequential element hsCD_reg was removed.  [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/pipe.v:109]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/pipe.v:131]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/pipe.v:132]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/pipe.v:131]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/pipe.v:132]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/pipe.v:131]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/pipe.v:132]
+INFO: [Synth 8-5546] ROM "valid" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element hspeed_reg was removed.  [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/pipe.v:109]
+WARNING: [Synth 8-6014] Unused sequential element hsCD_reg was removed.  [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/pipe.v:109]
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'seg_en_reg' in module 'result_display_module'
+INFO: [Synth 8-5544] ROM "seg_en" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element cnt_reg was removed.  [C:/Users/86182/Desktop/vivado workshop/homework_3/homework_3.srcs/sources_1/new/clock_divider.v:42]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/vga_pic.v:156]
+WARNING: [Synth 8-6014] Unused sequential element mm_reg was removed.  [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/vga_pic.v:57]
+INFO: [Synth 8-5546] ROM "vc" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 737.223 ; gain = 494.977
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 5     
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input     16 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 4     
+	   2 Input     12 Bit       Adders := 11    
+	   2 Input     11 Bit       Adders := 18    
+	   3 Input     11 Bit       Adders := 3     
+	   3 Input     10 Bit       Adders := 3     
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 4     
++---XORs : 
+	   2 Input      1 Bit         XORs := 15    
++---Registers : 
+	               16 Bit    Registers := 1     
+	               12 Bit    Registers := 6     
+	               11 Bit    Registers := 11    
+	                6 Bit    Registers := 2     
+	                5 Bit    Registers := 7     
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 12    
++---Multipliers : 
+	                 7x32  Multipliers := 4     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 3     
+	   2 Input     12 Bit        Muxes := 11    
+	   2 Input     11 Bit        Muxes := 25    
+	   2 Input      5 Bit        Muxes := 4     
+	   5 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 29    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module vga 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 4     
++---Registers : 
+	               11 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     11 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 2     
+Module bird 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 2     
+	   3 Input     16 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 5     
+	   2 Input     11 Bit       Adders := 2     
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	               12 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Multipliers : 
+	                 7x32  Multipliers := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 3     
+	   2 Input     12 Bit        Muxes := 5     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+Module pipe__xdcDup__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 2     
+	   2 Input     11 Bit       Adders := 4     
+	   3 Input     11 Bit       Adders := 1     
+	   3 Input     10 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 5     
++---Registers : 
+	               12 Bit    Registers := 1     
+	               11 Bit    Registers := 3     
+	                5 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Multipliers : 
+	                 7x32  Multipliers := 1     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 2     
+	   2 Input     11 Bit        Muxes := 7     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 7     
+Module pipe__xdcDup__2 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 2     
+	   2 Input     11 Bit       Adders := 4     
+	   3 Input     11 Bit       Adders := 1     
+	   3 Input     10 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 5     
++---Registers : 
+	               12 Bit    Registers := 1     
+	               11 Bit    Registers := 3     
+	                5 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Multipliers : 
+	                 7x32  Multipliers := 1     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 2     
+	   2 Input     11 Bit        Muxes := 7     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 7     
+Module pipe 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 2     
+	   2 Input     11 Bit       Adders := 4     
+	   3 Input     11 Bit       Adders := 1     
+	   3 Input     10 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 5     
++---Registers : 
+	               12 Bit    Registers := 1     
+	               11 Bit    Registers := 3     
+	                5 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Multipliers : 
+	                 7x32  Multipliers := 1     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 2     
+	   2 Input     11 Bit        Muxes := 7     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 7     
+Module result_display_module 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 2     
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module clock_divider 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	                1 Bit    Registers := 1     
+Module vga_pic 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	               12 Bit    Registers := 1     
+	                6 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/pipe.v:131]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/pipe.v:131]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/pipe.v:131]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/pipe.v:132]
+INFO: [Synth 8-5546] ROM "p1/valid" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p2/valid" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p3/valid" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element p1/hsCD_reg was removed.  [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/pipe.v:109]
+WARNING: [Synth 8-6014] Unused sequential element p1/hspeed_reg was removed.  [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/pipe.v:109]
+WARNING: [Synth 8-6014] Unused sequential element p2/hsCD_reg was removed.  [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/pipe.v:109]
+WARNING: [Synth 8-6014] Unused sequential element p2/hspeed_reg was removed.  [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/pipe.v:109]
+WARNING: [Synth 8-6014] Unused sequential element p3/hsCD_reg was removed.  [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/pipe.v:109]
+WARNING: [Synth 8-6014] Unused sequential element p3/hspeed_reg was removed.  [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/pipe.v:109]
+WARNING: [Synth 8-6014] Unused sequential element mm_reg was removed.  [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/vga_pic.v:57]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/bird.v:113]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/bird.v:112]
+INFO: [Synth 8-5546] ROM "valid" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element hsCD_reg was removed.  [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/bird.v:68]
+DSP Report: Generating DSP bigheight1, operation Mode is: A*(B:0x3c).
+DSP Report: operator bigheight1 is absorbed into DSP bigheight1.
+DSP Report: Generating DSP birdpos0, operation Mode is: A*(B:0x56).
+DSP Report: operator birdpos0 is absorbed into DSP birdpos0.
+DSP Report: Generating DSP birdpos, operation Mode is: PCIN+(A:0x0):B+(C:0xffffffffffff).
+DSP Report: operator birdpos is absorbed into DSP birdpos.
+WARNING: [Synth 8-6014] Unused sequential element cnt_reg was removed.  [C:/Users/86182/Desktop/vivado workshop/homework_3/homework_3.srcs/sources_1/new/clock_divider.v:42]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/pipe.v:131]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/pipe.v:131]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/pipe.v:131]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/pipe.v:132]
+INFO: [Synth 8-5546] ROM "p3/valid" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p2/valid" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p1/valid" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element p1/hsCD_reg was removed.  [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/pipe.v:109]
+WARNING: [Synth 8-6014] Unused sequential element p1/hspeed_reg was removed.  [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/pipe.v:109]
+WARNING: [Synth 8-6014] Unused sequential element p2/hsCD_reg was removed.  [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/pipe.v:109]
+WARNING: [Synth 8-6014] Unused sequential element p2/hspeed_reg was removed.  [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/pipe.v:109]
+WARNING: [Synth 8-6014] Unused sequential element p3/hsCD_reg was removed.  [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/pipe.v:109]
+WARNING: [Synth 8-6014] Unused sequential element p3/hspeed_reg was removed.  [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/pipe.v:109]
+WARNING: [Synth 8-6014] Unused sequential element mm_reg was removed.  [C:/Users/86182/Desktop/vivado workshop/project/project.srcs/sources_1/new/vga_pic.v:57]
+DSP Report: Generating DSP p1/p_y1, operation Mode is: A*(B:0x12c).
+DSP Report: operator p1/p_y1 is absorbed into DSP p1/p_y1.
+DSP Report: Generating DSP p1/pipepos0, operation Mode is: A*(B:0x56).
+DSP Report: operator p1/pipepos0 is absorbed into DSP p1/pipepos0.
+DSP Report: Generating DSP bg_x1, operation Mode is: A*(B:0xc8).
+DSP Report: operator bg_x1 is absorbed into DSP bg_x1.
+DSP Report: Generating DSP bg_y1, operation Mode is: A*(B:0x96).
+DSP Report: operator bg_y1 is absorbed into DSP bg_y1.
+DSP Report: Generating DSP backgroundpos, operation Mode is: C+A*(B:0xc8).
+DSP Report: operator backgroundpos is absorbed into DSP backgroundpos.
+DSP Report: operator backgroundpos0 is absorbed into DSP backgroundpos.
+INFO: [Synth 8-5546] ROM "vc" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3331] design clock_divider has unconnected port period[0]
+INFO: [Synth 8-3886] merging instance 'p/p3/p_height_reg[0]' (FDCE) to 'p/p3/p_height_reg[10]'
+INFO: [Synth 8-3886] merging instance 'p/p2/p_height_reg[0]' (FDCE) to 'p/p2/p_height_reg[10]'
+INFO: [Synth 8-3886] merging instance 'p/p1/p_height_reg[0]' (FDCE) to 'p/p1/p_height_reg[10]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (p/\p3/p_height_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (p/\p2/p_height_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (p/\p1/p_height_reg[10] )
+WARNING: [Synth 8-3332] Sequential element (p1/p_height_reg[10]) is unused and will be removed from module vga_pic.
+WARNING: [Synth 8-3332] Sequential element (p2/p_height_reg[10]) is unused and will be removed from module vga_pic.
+WARNING: [Synth 8-3332] Sequential element (p3/p_height_reg[10]) is unused and will be removed from module vga_pic.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 737.223 ; gain = 494.977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+-----------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping                       | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-----------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|bird        | A*(B:0x3c)                        | 11     | 6      | -      | -      | 17     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|bird        | A*(B:0x56)                        | 13     | 7      | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|bird        | PCIN+(A:0x0):B+(C:0xffffffffffff) | 30     | 11     | 1      | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|pipe        | A*(B:0x12c)                       | 11     | 9      | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pipe        | A*(B:0x56)                        | 15     | 7      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vga_pic     | A*(B:0xc8)                        | 11     | 8      | -      | -      | 19     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vga_pic     | A*(B:0x96)                        | 11     | 8      | -      | -      | 19     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vga_pic     | C+A*(B:0xc8)                      | 10     | 8      | 10     | -      | 16     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
++------------+-----------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'clk_inst/clk_out1' to pin 'clk_inst/bbstub_clk_out1/O'
+INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 844.445 ; gain = 602.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 950.023 ; gain = 707.777
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (p/p1/p_height_reg[9]_P) is unused and will be removed from module vga.
+WARNING: [Synth 8-3332] Sequential element (p/p2/p_height_reg[9]_P) is unused and will be removed from module vga.
+WARNING: [Synth 8-3332] Sequential element (p/p3/p_height_reg[9]_P) is unused and will be removed from module vga.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 987.207 ; gain = 744.961
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-4442] BlackBox module clk_inst has unconnected pin reset
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 987.207 ; gain = 744.961
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 987.207 ; gain = 744.961
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 987.207 ; gain = 744.961
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 987.207 ; gain = 744.961
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 987.207 ; gain = 744.961
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 987.207 ; gain = 744.961
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+---------------+----------+
+|      |BlackBox name  |Instances |
++------+---------------+----------+
+|1     |clk_wiz_0      |         1|
+|2     |mem_background |         1|
+|3     |mem_bird       |         1|
+|4     |mem_pipe       |         3|
++------+---------------+----------+
+
+Report Cell Usage: 
++------+---------------+------+
+|      |Cell           |Count |
++------+---------------+------+
+|1     |clk_wiz_0      |     1|
+|2     |mem_background |     1|
+|3     |mem_bird       |     1|
+|4     |mem_pipe       |     1|
+|5     |mem_pipe__3    |     1|
+|6     |mem_pipe__4    |     1|
+|7     |BUFG           |     1|
+|8     |CARRY4         |   522|
+|9     |DSP48E1        |     6|
+|10    |DSP48E1_1      |     1|
+|11    |DSP48E1_2      |     1|
+|12    |LUT1           |   144|
+|13    |LUT2           |   961|
+|14    |LUT3           |   697|
+|15    |LUT4           |   740|
+|16    |LUT5           |   477|
+|17    |LUT6           |   667|
+|18    |FDCE           |   218|
+|19    |FDPE           |    83|
+|20    |FDRE           |    41|
+|21    |LDC            |    40|
+|22    |IBUF           |     4|
+|23    |OBUF           |    26|
++------+---------------+------+
+
+Report Instance Areas: 
++------+---------+----------------------+------+
+|      |Instance |Module                |Cells |
++------+---------+----------------------+------+
+|1     |top      |                      |  4691|
+|2     |  p      |vga_pic               |  4485|
+|3     |    b    |bird                  |  1442|
+|4     |    cd   |clock_divider         |    89|
+|5     |    p1   |pipe__xdcDup__1       |  1034|
+|6     |    p2   |pipe__xdcDup__2       |   739|
+|7     |    p3   |pipe                  |   729|
+|8     |    rdm  |result_display_module |    38|
++------+---------+----------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 987.207 ; gain = 744.961
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 1 critical warnings and 32 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 987.207 ; gain = 403.691
+Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 987.207 ; gain = 744.961
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 574 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 40 instances were transformed.
+  LDC => LDCE: 40 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+92 Infos, 38 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 987.207 ; gain = 756.465
+INFO: [Common 17-1381] The checkpoint 'C:/Users/86182/Desktop/vivado workshop/project/project.runs/synth_1/vga.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file vga_utilization_synth.rpt -pb vga_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.027 . Memory (MB): peak = 987.207 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Jul 30 22:53:52 2022...

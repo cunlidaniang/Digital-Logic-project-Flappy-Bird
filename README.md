@@ -10,4 +10,4 @@ requirement:  EGO1 board
 
 ### Description
 
-please check the word file in this repository.
+please refer to the word file in this repository.
